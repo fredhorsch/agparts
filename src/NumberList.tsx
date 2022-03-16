@@ -21,7 +21,7 @@ const NumberList = () => {
     return (
         <div className="NumberList">
         {frederic.map((value) =>{
-                return <button onClick={() => sagHelloWorld(value)}> {value} </button>
+                return <button className="numberButton" onClick={() => sagHelloWorld(value)}> {value} </button>
             })}
         <button onClick={() => pushElement()}> Fuege Hinzu  </button>
         </div>
