@@ -6,7 +6,7 @@ import terracut from './images/Terracut_01.jpeg';
 
 const MainProductList = () => {
     
-    const [productList, setProductList] = useState([
+    const [productList, setProductList] = useState<{name: string, alter: string, img: string, isClicked: boolean}[]>([
         {name: 'max', alter: '24', img: terracut, isClicked: false},
         {name: 'frederic1', alter: '100', img: flexGrip, isClicked: false},
         {name: 'frederic2', alter: '100', img: flexGrip, isClicked: false},
