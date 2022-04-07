@@ -1,3 +1,8 @@
+import './MainProductList.scss'
+
+import flexGrip from './images/FlexGrip_HM_80_01.jpg';
+import terracut from './images/Terracut_01.jpeg';
+
 const MainProductList = () => {
 
     const productList = [
@@ -10,8 +15,9 @@ const MainProductList = () => {
             {productList.map((element, index) => {
                 return (
                     <div className="productListItem" id={`item${index}`}>
-                        <p>{element.name}</p>
-                        <p>{element.alter}</p>
+                        <p className="contentDisplay">{element.name}</p>
+                        <img src={element.img}/>
+                        <p className="contentDisplay">{element.alter}</p>
                     </div>
                 )
             })}

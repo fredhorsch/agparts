@@ -1,0 +1,20 @@
+.productList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.productListItem {
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 80px;
+  height: 150px;
+  margin: 10px;
+}
+
+.contentDisplay {
+  display: flex;
+  justify-content: center;
+}
