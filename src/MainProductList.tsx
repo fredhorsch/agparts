@@ -16,29 +16,29 @@ const MainProductList = () => {
         {name: 'frederic6', alter: '100', img: flexGrip, isClicked: false},
     ]);
 
+    const changeIsClicked = (element: {name: string, alter: string, img: string, isClicked: boolean}) => {
+        productList.map((currentElement, index) => {
+            if (currentElement.name == element.name) { // search for correct element
+
+                let productListArray = [...productList];
+
+                let changedElement = {
+                    ...productList[index],
+                    isClicked: !productList[index].isClicked
+                }
+
+                productListArray[index] = changedElement;
+
+                setProductList(productListArray);
+            }
+        })
+    }
+
     return (
         <div className="productList">
             {productList.map((element, index) => {
                 return (
-                    <div onClick={() => {{
-
-                        productList.map((currentElement, index) => {
-                            if (currentElement.name == element.name) { // search for correct element
-
-                                let productListArray = [...productList];
-
-                                let changedElement = {
-                                    ...productList[index],
-                                    isClicked: !productList[index].isClicked
-                                }
-
-                                productListArray[index] = changedElement;
-
-                                setProductList(productListArray);
-                            }
-                        })
-
-                    }}} style={{backgroundColor: element.isClicked ? 'green' : 'red'}} className="productListItem" id={`item${index}`}>
+                    <div onClick={() => {changeIsClicked(element)}} style={{backgroundColor: element.isClicked ? 'green' : 'red'}} className="productListItem" id={`item${index}`}>
                         <p>{`${element.isClicked}`}</p>
                         <p className="contentDisplay">{element.name}</p>
                         <img src={element.img}/>
