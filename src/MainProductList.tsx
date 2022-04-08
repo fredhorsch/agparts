@@ -1,6 +1,8 @@
 import './MainProductList.scss'
 import { useState, useEffect } from 'react';
 
+// fixme Nextes feature ist das anklicken von objekten und diese dann unten anzeigen nur 2 davon
+
 import flexGrip from './images/FlexGrip_HM_80_01.jpg';
 import terracut from './images/Terracut_01.jpeg';
 
