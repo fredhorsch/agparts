@@ -7,12 +7,20 @@ import flexGrip from './images/FlexGrip_HM_80_01.jpg';
 import terracut from './images/Terracut_01.jpeg';
 
 const MainProductList = () => {
-    
-    const [productList, setProductList] = useState<{name: string, price: number, description: string, img: string, isClicked: boolean}[]>([
+
+    type Product = {
+        name: string,
+        price: number,
+        description: string,
+        img: string,
+        isClicked: boolean
+    }
+
+    const [productList, setProductList] = useState<Product[]>([
         {name: 'max', price: 0, description: '', img: terracut, isClicked: false},
     ]);
 
-    const changeIsClicked = (element: {name: string, price: number, description: string, img: string, isClicked: boolean}, index: any) => {
+    const changeIsClicked = (index: any) => {
 
                 let productListArray = [...productList];
 
@@ -30,7 +38,7 @@ const MainProductList = () => {
         <div className="productList">
             {productList.map((element, index) => {
                 return (
-                    <div onClick={() => {changeIsClicked(element, index)}} style={{backgroundColor: element.isClicked ? 'green' : 'red'}} className="productListItem" id={`item${index}`}>
+                    <div onClick={() => {changeIsClicked(index)}} style={{backgroundColor: element.isClicked ? 'green' : 'red'}} className="productListItem" id={`item${index}`}>
                         <p>{`${element.isClicked}`}</p>
                         <p className="contentDisplay">{element.name}</p>
                         <img src={element.img}/>
