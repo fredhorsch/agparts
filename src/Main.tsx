@@ -13,8 +13,8 @@ const Main = () => {
 
     return (
         <div>
-            <MainCompare/>
-            <MainProductList productList={productList} setProductList={setProductList}/>
+            <MainCompare productList={productList}/>
+            <MainProductList  productList={productList} setProductList={setProductList}/>
         </div>
     );
 }
