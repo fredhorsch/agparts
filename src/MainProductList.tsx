@@ -1,23 +1,9 @@
 import './MainProductList.scss'
-import { useState, useEffect } from 'react';
+import ProductType from "./ProductType";
 
 // fixme Nextes feature ist das anklicken von objekten und diese dann unten anzeigen nur 2 davon
 
-const MainProductList = () => {
-
-    type Product = {
-        name: string,
-        price: number,
-        description: string,
-        img: string,
-        isClicked: boolean
-    }
-
-    const [productList, setProductList] = useState<Product[]>([
-        {name: 'max', price: 100, description: 'desc 1', img: './images/Terracut_01.jpeg', isClicked: false},
-        {name: 'fred', price: 200, description: 'desc 2', img: './images/FlexGrip_HM_80_01.jpg', isClicked: false},
-        {name: 'test', price: 300, description: 'desc 3', img: './images/Terracut_01.jpeg', isClicked: false},
-    ]);
+const MainProductList = ({productList, setProductList}: {productList: ProductType[], setProductList: (productListArray: ProductType[]) => void}) => {
 
     const changeIsClicked = (index: any) => {
 
