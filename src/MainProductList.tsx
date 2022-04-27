@@ -3,9 +3,6 @@ import { useState, useEffect } from 'react';
 
 // fixme Nextes feature ist das anklicken von objekten und diese dann unten anzeigen nur 2 davon
 
-import flexGrip from './images/FlexGrip_HM_80_01.jpg';
-import terracut from './images/Terracut_01.jpeg';
-
 const MainProductList = () => {
 
     type Product = {
@@ -17,7 +14,9 @@ const MainProductList = () => {
     }
 
     const [productList, setProductList] = useState<Product[]>([
-        {name: 'max', price: 0, description: '', img: terracut, isClicked: false},
+        {name: 'max', price: 100, description: 'desc 1', img: './images/Terracut_01.jpeg', isClicked: false},
+        {name: 'fred', price: 200, description: 'desc 2', img: './images/FlexGrip_HM_80_01.jpg', isClicked: false},
+        {name: 'test', price: 300, description: 'desc 3', img: './images/Terracut_01.jpeg', isClicked: false},
     ]);
 
     const changeIsClicked = (index: any) => {
@@ -41,7 +40,7 @@ const MainProductList = () => {
                     <div onClick={() => {changeIsClicked(index)}} style={{backgroundColor: element.isClicked ? 'green' : 'red'}} className="productListItem" id={`item${index}`}>
                         <p>{`${element.isClicked}`}</p>
                         <p className="contentDisplay">{element.name}</p>
-                        <img src={element.img}/>
+                        <img src={require(`${element.img}`)}/>
                     </div>
                 )
             })}
