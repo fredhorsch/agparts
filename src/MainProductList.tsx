@@ -23,7 +23,7 @@ const MainProductList = ({productList, setProductList}: {productList: ProductTyp
         <div className="productList">
             {productList.map((element, index) => {
                 return (
-                    <div onClick={() => {changeIsClicked(index)}} style={{backgroundColor: element.isClicked ? 'green' : 'red'}} className="productListItem" id={`item${index}`}>
+                    <div onClick={() => {changeIsClicked(index)}} style={{backgroundColor: element.isClicked ? 'lightgray' : 'white'}} className="productListItem" id={`item${index}`}>
                         <p className="contentDisplay">{element.name}</p>
                         <img src={require(`${element.img}`)}/>
                     </div>
