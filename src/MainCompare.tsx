@@ -1,18 +1,19 @@
 import ProductType from './ProductType';
+import './MainCompare.scss'
 
 const MainCompare = ({productList}: {productList: ProductType[]}) => {
 
     let productListFiltered = productList.filter(element => element.isClicked);
 
     return (
-        <div>
+        <div className="productListCompare">
             {productListFiltered.map(element => {
                 return (
-                    <div>
-                        <h1>{element.name}</h1>
+                    <div className="productListItemCompare">
+                        <h1>Name: {element.name}</h1>
                         <img src={require(`${element.img}`)}/>
-                        <p>{element.description}</p>
-                        <p>{element.price}</p>
+                        <p>Beschreibung: {element.description}</p>
+                        <p>Preis: {element.price}</p>
                     </div>
                 )
             })}
