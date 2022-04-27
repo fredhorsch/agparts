@@ -8,17 +8,11 @@ import terracut from './images/Terracut_01.jpeg';
 
 const MainProductList = () => {
     
-    const [productList, setProductList] = useState<{name: string, alter: string, img: string, isClicked: boolean}[]>([
-        {name: 'max', alter: '24', img: terracut, isClicked: false},
-        {name: 'frederic1', alter: '100', img: flexGrip, isClicked: false},
-        {name: 'frederic2', alter: '100', img: flexGrip, isClicked: false},
-        {name: 'frederic3', alter: '100', img: flexGrip, isClicked: false},
-        {name: 'frederic4', alter: '100', img: flexGrip, isClicked: false},
-        {name: 'frederic5', alter: '100', img: flexGrip, isClicked: false},
-        {name: 'frederic6', alter: '100', img: flexGrip, isClicked: false},
+    const [productList, setProductList] = useState<{name: string, price: number, description: string, img: string, isClicked: boolean}[]>([
+        {name: 'max', price: 0, description: '', img: terracut, isClicked: false},
     ]);
 
-    const changeIsClicked = (element: {name: string, alter: string, img: string, isClicked: boolean}, index: any) => {
+    const changeIsClicked = (element: {name: string, price: number, description: string, img: string, isClicked: boolean}, index: any) => {
 
                 let productListArray = [...productList];
 
@@ -40,7 +34,6 @@ const MainProductList = () => {
                         <p>{`${element.isClicked}`}</p>
                         <p className="contentDisplay">{element.name}</p>
                         <img src={element.img}/>
-                        <p className="contentDisplay">{element.alter}</p>
                     </div>
                 )
             })}
