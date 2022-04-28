@@ -4,11 +4,12 @@ const Header = () => {
     return (
         <div className="topHeader">
             <div className="leftHeaderItem">
-                <img src={require(`./images/Agparts_logo.png`)} alt='AgParts'/>
+                <img className='LogoImage' src={require(`./images/Agparts_logo.png`)} alt='AgParts'/>
             </div>
             <div className="rightHeaderItem">
-                <a href="https://www.ag-parts.de">Ag-Parts</a>
-                <a href="https://www.ag-parts.de">Ag-Parts</a>
+                <a href="https://ag-parts.de/en">Home</a>
+                <a href="https://ag-parts.de/en/collections/all">Shop</a>
+                <a href="https://ag-parts.de/en/pages/contact">Contact</a>
             </div>
         </div>
     )
