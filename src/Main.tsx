@@ -2,6 +2,7 @@ import MainCompare from "./MainCompare";
 import MainProductList from "./MainProductList";
 import {useState} from "react";
 import ProductType from './ProductType';
+import './Main.scss'
 
 const Main = () => {
 
@@ -12,7 +13,7 @@ const Main = () => {
     ]);
 
     return (
-        <div>
+        <div className='MainBox'>
             <MainCompare productList={productList}/>
             <MainProductList  productList={productList} setProductList={setProductList}/>
         </div>
