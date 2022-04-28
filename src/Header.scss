@@ -1,7 +1,9 @@
 .topHeader {
-  background-color: yellow;
+  background-color: rgb(38,63,68);
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  min-height: 85px;
 }
 
 .leftHeaderItem {

@@ -25,7 +25,7 @@ const MainProductList = ({productList, setProductList}: {productList: ProductTyp
                 return (
                     <div onClick={() => {changeIsClicked(index)}} style={{backgroundColor: element.isClicked ? 'lightgray' : 'white'}} className="productListItem" id={`item${index}`}>
                         <p className="contentDisplay">{element.name}</p>
-                        <img src={require(`${element.img}`)}/>
+                        <img src={require(`${element.img}`)} alt='Product Item'/>
                     </div>
                 )
             })}
