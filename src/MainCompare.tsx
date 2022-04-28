@@ -7,16 +7,18 @@ const MainCompare = ({productList}: {productList: ProductType[]}) => {
 
     return (
         <div className="productListCompare">
+            <div className="productListCompareInnerWrapper">
             {productListFiltered.map(element => {
                 return (
                     <div className="productListItemCompare">
-                        <h1>Name: {element.name}</h1>
                         <img src={require(`${element.img}`)} alt='Product Item'/>
-                        <p>Beschreibung: {element.description}</p>
-                        <p>Preis: {element.price}</p>
+                        <h1>{element.name}</h1>
+                        <p>{element.description}</p>
+                        <p>{element.price}€</p>
                     </div>
                 )
             })}
+            </div>
         </div>
     );
 }
