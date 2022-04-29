@@ -6,9 +6,6 @@ A comparison website, to compare different parts and their features.
 
 ## Technologies
 
-Java Script
-HTML
-SCSS
-CSS
+Java Script, HTML, SCSS, CSS
 
 
