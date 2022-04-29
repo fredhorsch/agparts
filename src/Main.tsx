@@ -7,9 +7,9 @@ import './Main.scss'
 const Main = () => {
 
     const [productList, setProductList] = useState<ProductType[]>([
-        {name: 'max', price: 53, description: 'desc 1', img: './images/FlexGrip_HM_80_01.jpeg', isClicked: false},
-        {name: 'fred', price: 38, description: 'desc 2', img: './images/Terracut_01.jpg', isClicked: false},
-        {name: 'test', price: 45, description: 'desc 3', img: './images/TerraCut_SW_02.jpeg', isClicked: false},
+        {name: 'FelxGrip Schar', price: 53, description: '80 mm wide, with carbide plates. For Cruiser.', img: './images/FlexGrip_HM_80_01.jpg', isClicked: false},
+        {name: 'TerraCut', price: 38, description: '400 mm wide, with carbide plates without paint. For Terrano.', img: './images/Terracut_01.jpeg', isClicked: false},
+        {name: 'TerraCut', price: 45, description: '400 mm wide, with carbide plates with paint. For Terrano.', img: './images/TerraCut_SW_02.jpg', isClicked: false},
     ]);
 
     return (
