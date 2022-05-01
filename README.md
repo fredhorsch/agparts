@@ -16,7 +16,7 @@ At least Note JS version 14. is required for the latest react version. I applied
 npm (Note Package Manager) 
 
 Run:
-Open the Terminal. Go with the comand "cd" to the file where all the data of the programm is. Start the website with the command "npm start".
+Open the Terminal. Go with the comand "cd" to the file where all the data of the programm is stored. Start the website with the command "npm start". The website will open localy on your browser. 
 
 ## Live Website
 
